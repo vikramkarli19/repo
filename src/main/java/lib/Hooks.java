@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Hooks  {
     WebDriver driver;
-    @Before("@setup")
+
     public WebDriver driverManager(){
         WebDriverManager.chromedriver().setup();
         // Initialize the WebDriver

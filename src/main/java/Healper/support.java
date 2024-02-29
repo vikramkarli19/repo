@@ -1,12 +1,21 @@
 package Healper;
 
-import lib.Hooks;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
-public class support extends Hooks {
-    WebDriver driver;
-    public void openBrowser(){
-        driver = driverManager();
-        driver.get("https://www.youtube.com/");
+public class support  {
+    private  WebDriver driver;
+
+    @FindBy(xpath = "//span[text()='Sign in']")
+    private WebElement signIn;
+    public void setup(){
+        driver = driverSetup.setDriver();
+        driver.get("https://www.amazon.in/");
     }
+
+    public void login(){
+        signIn.click();
+    }
+
 }
