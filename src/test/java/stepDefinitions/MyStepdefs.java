@@ -14,8 +14,8 @@ public class MyStepdefs  {
     @Given("the user is on the login page")
     public void theUserIsOnTheLoginPage() {
         System.out.println("THIS IS LOGIN");
-        sup.setup();
-        sup.login();
+        //*[@id="endpoint"]/tp-yt-paper-item/yt-formatted-string
+
     }
 
     @When("the user enters valid credentials")
